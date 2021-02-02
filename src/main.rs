@@ -50,7 +50,8 @@ fn main() {
         
         print!("> ");
         stdout()
-            .flush();
+            .flush()
+            .expect("An error was encountered whilst flushing stdout.");
         stdin()
             .read_line(&mut input)
             .unwrap();
